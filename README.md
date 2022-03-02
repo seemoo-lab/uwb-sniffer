@@ -5,6 +5,12 @@ This project contains the code needed to create a UWB Sniffer using the Qorvo DW
 ## Hardware 
 Our implementation is based on a [DWM3000EVB](https://www.decawave.com/product/dwm3000evb/) and a NUCLEO-F429ZI. Different boards, such as a nRF52840, can be used as well, but some code needs to be adapted. 
 
+### Modifications 
+The NUCELO-F429ZI needs to be slightly modified to behave correctly when the DWM3000EVB is attached. These modifications are not necessary for nRF boards. 
+Remove solder on SB121 and solder SB122. 
+
+<img src="images/NUCLEO-solder.jpg" height="300px">
+
 ## Compilation 
 The following tools are required to compile the project: 
 
