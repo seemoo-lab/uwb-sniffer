@@ -1,6 +1,29 @@
 # UWB Sniffer 
 
 This project contains the code needed to create a UWB Sniffer using the Qorvo DW3000 chips. 
+The sniffer allows to receive frame with accurate timestamps (15.65ps). 
+All received frames are forwarded over to a host computer which can display them in Wireshark. 
+
+## Demonstration 
+
+Click on the image below to watch our demo video
+[![Youtube Video](https://img.youtube.com/vi/akCwyHqgbhY/0.jpg)](https://www.youtube.com/watch?v=akCwyHqgbhY)
+
+The sniffer is able to receive arbitrary UWB 802.15.4(z) frames. To accomplish this task, we use the DWM3000EVB board connected to a NUCLEO-F429ZI. 
+
+<img src="./images/sniffer-board.jpg" height="300px">
+
+With the STM Cube IDE we compile our code and flash it to the attached nucleo. 
+
+<img src="./images/sniffer-code.png"  height="300px">
+
+Then we run our adapted Python script sensniff. 
+
+<img src="./images/sensniff.png"  height="200px">
+
+In the end, we are able to receive the bytes and timestamps through Wireshark. 
+
+<img src="./images/wireshark.png"  height="300px">
 
 ## Hardware 
 Our implementation is based on a [DWM3000EVB](https://www.decawave.com/product/dwm3000evb/) and a NUCLEO-F429ZI. Different boards, such as a nRF52840, can be used as well, but some code needs to be adapted. 
